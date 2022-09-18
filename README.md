@@ -22,7 +22,7 @@ valscreen ~sp500
 valscreen ~sp500,~tsx60
 
 # Run the quantitative stock screener over the Dow Jones Industrial Average (DJIA) index, while forcing tickers to update (ignore cached data, slower but ensures the data is up-to-date)
-valscreen ~dow
+valscreen ~dow -u
 ```
 
 ## Example of screening with the Dow Jones Industrial Average
