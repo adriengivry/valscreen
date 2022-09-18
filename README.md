@@ -18,8 +18,8 @@ valscreen AAPL,INTC,TXN,LOGI
 # Run the quantitative stock screener over the S&P500 index
 valscreen ~sp500
 
-# Run the quantitative stock screener over the S&P500 index and BMO.TO
-valscreen ~sp500,BMO.TO
+# Run the quantitative stock screener over the S&P500 index and S&P/TSX60
+valscreen ~sp500,~tsx60
 
 # Run the quantitative stock screener over the Dow Jones Industrial Average (DJIA) index, while forcing tickers to update (ignore cached data, slower but ensures the data is up-to-date)
 valscreen ~dow

@@ -12,7 +12,7 @@ def get_key(tickerAnalysis: TickerAnalysis):
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument(dest='stocklist', help='list of companies (or preset lists: ~sp500, ~dow) to screen through (ex: aapl,~dow,txn)')
+    parser.add_argument(dest='stocklist', help='list of companies (or preset lists: ~sp500, ~dow, ~tsx60) to screen through (ex: aapl,~dow,txn)')
     parser.add_argument('-u', '--update', action='store_true', dest='update', help='force updating tickers by pulling data from yahoo finance even for previously cached tickers (can be very slow when dealing with a lot of tickers)')
     parser.add_argument('-c', '--clear', action='store_true', dest='clear', help='clears the cache before the analysis (NOT RECOMMENDED, VERY SLOW)')
     args = parser.parse_args()
@@ -27,6 +27,8 @@ def main() -> int:
                 symbols += Stocklists.get_sp500_list()
             elif preset == 'dow':
                 symbols += Stocklists.get_dow_list()
+            elif preset == 'tsx60':
+                symbols += Stocklists.get_tsx60()
         else:
             symbols.append(element.upper())
 

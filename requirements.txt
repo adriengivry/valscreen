@@ -1,4 +1,5 @@
 colorama==0.4.5
+html5lib==1.1
 pandas==1.4.3
 plotext==5.0.2
 prettytable==3.3.0
