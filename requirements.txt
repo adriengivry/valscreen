@@ -1,0 +1,6 @@
+colorama==0.4.5
+pandas==1.4.3
+plotext==5.0.2
+prettytable==3.3.0
+setuptools==58.1.0
+yfinance==0.1.74
