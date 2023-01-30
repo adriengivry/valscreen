@@ -22,20 +22,20 @@ class TickerAnalysis:
         if ticker.price <= 0.01:
             return False
 
-        grahamNumber = math.sqrt(22.5 * ticker.trailingEps * ticker.bookValue)
-        serenityNumber = math.sqrt(12 * ticker.trailingEps * ticker.bookValue)
-        defensiveIntrinsicValue = grahamNumber / ticker.price
-        entreprisingIntrinsicValue = serenityNumber / ticker.price
+        defensivePrice = math.sqrt(22.5 * ticker.trailingEps * ticker.bookValue)
+        entreprisingPrice = math.sqrt(12 * ticker.trailingEps * ticker.bookValue)
+        defensiveRatio = defensivePrice / ticker.price
+        entreprisingRatio = entreprisingPrice / ticker.price
 
         self.entries['Symbol'] = ticker.symbol
         self.entries['Company Name'] = ticker.companyName
         self.entries['Sector'] = ticker.sector
         self.entries['Industry'] = ticker.industry
         self.entries['Price'] = ticker.price
-        self.entries['Graham Number'] = grahamNumber
-        self.entries['Serenity Number'] = serenityNumber
-        self.entries['Defensive Ratio'] = defensiveIntrinsicValue
-        self.entries['Entreprising Ratio'] = entreprisingIntrinsicValue
+        self.entries['Defensive Price'] = defensivePrice
+        self.entries['Entreprising Price'] = entreprisingPrice
+        self.entries['Defensive Ratio'] = defensiveRatio
+        self.entries['Entreprising Ratio'] = entreprisingRatio
 
         return True
         
